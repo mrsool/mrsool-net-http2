@@ -112,7 +112,7 @@ module NetHttp2
           rescue EOFError
             # socket closed
             init_vars
-            callback_or_raise SocketError.new('Socket was remotely closed!!!!!!!!!')
+            callback_or_raise SocketError.new('Socket was remotely closed')
 
           rescue Exception => e
             # error on socket
