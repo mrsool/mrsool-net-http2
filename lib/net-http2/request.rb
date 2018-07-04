@@ -40,34 +40,9 @@ module NetHttp2
       @headers.update(@headers) { |_k, v| v.to_s }
 
       ##Added sorting of headers
-      @headers = @headers.sort.to_h
+      # @headers = @headers.sort.to_h
 
       @headers
-
-      # @final_headers = {}
-
-      # @final_headers.merge!({
-      #   ':scheme' => @uri.scheme,
-      #   ':method' => @method.to_s.upcase,
-      #   ':path'   => full_path,
-      # })
-
-      # @final_headers.merge!(':authority' => "#{@uri.host}:#{@uri.port}") unless @headers[':authority']
-
-      # @final_headers.merge!(@headers)
-
-      # if @body
-      #   @final_headers.merge!('content-length' => @body.bytesize)
-      # else
-      #   @final_headers.delete('content-length')
-      # end
-
-      # @final_headers.update(@final_headers) { |_k, v| v.to_s }
-
-      # ##Added sorting of headers
-      # @final_headers = @final_headers.sort#.to_h
-
-      # @final_headers
     end
 
     def full_path
