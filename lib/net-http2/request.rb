@@ -40,7 +40,7 @@ module NetHttp2
       @headers.update(@headers) { |_k, v| v.to_s }
 
       ##Added sorting of headers
-      # @headers = @headers.sort.to_h
+      @headers = @headers.sort.to_h
 
       @headers
     end
